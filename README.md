@@ -1060,6 +1060,29 @@ Again, there are many things you can do with mathematical functions and operator
 
 ## String Functions
 
+Here is the official documentation on [string functions](https://www.postgresql.org/docs/10/static/functions-string.html) for PostgreSQL
+
+PostgreSQL gives us a bunch of amazing string functions you can use to manipulate or analyze columns containing data made of strings, such as `text` for example:
+
+The concatenation operator
+``SQL
+||
+```
+
+So, for example:
+
+```SQL
+SELECT first_name || ' ' || last_Name AS full_name
+FROM customer
+LIMIT 1;
+```
+
+This would return a result like this:
+
+| full_name |
+| --------: |
+| jared Ely | 
+
 ### Experienced in SQL / PostgreSQL and see an issue / error in these docs?
 [Let me know](https://github.com/MDJ-Studios/SQL/issues/new), and I'll be happy to review and correct it.
 
