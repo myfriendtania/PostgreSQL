@@ -996,3 +996,9 @@ This query would return the following results:
 | sum     |   month     |
 | :----: | :--------: |
 | 28559.46  | 4       |
+
+There are many things you can do with the `extract` function, but this is just a small example. If you would like to see other tools you can use with this function besides extracting the month or a day, you can read the [official documentation](https://www.postgresql.org/docs/10/static/functions-datetime.html)
+
+
+## Mathematical Functions and Operators SQL
+Here's a [link](https://www.postgresql.org/docs/10/static/functions-math.html) to the documentation for Mathematical functions and operators.
