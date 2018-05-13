@@ -972,7 +972,55 @@ SELECT <column_1>, <column_2>
 FROM <table_2>
 ```
 
-So when would we ever need to use this?
+## SELF JOIN
+
+This is a SQL query that allow you to join two rows on the same table. In order to make a self-join, you'll need to use an alias so your SQL engine will be able to tell both sides of your query apart.
+
+
+Let's see an example:
+
+Say you wanted to see who in the customer table had the same name as first name as someone else in the table who had the name as a last name.
+
+```SQL
+SELECT a.customer_id,
+a.first_name, a.last_name,
+b.customer_id,
+b.first_name, b.last_name
+FROM customer AS a, customer AS b
+WHERE a.first_name = b.last_name
+```
+One thing you'll probably notice here is that for a `SELF JOIN`, this SQL syntax doesn't use the `JOIN` keyword, and that's simply because it's a self-join.
+
+Now you could use the `JOIN` keyword if you like, but you'll just need to remember to use your aliases.
+
+Here's an example of a `SELF JOIN` using the `JOIN` keyword:
+
+```SQL
+SELECT a.customer_id, a.first_name, a.last_name,
+b.customer_id, b.first_name, b.last_name
+FROM customer AS a
+JOIN customer AS b
+ON a.first_name = b.last_name
+```
+
+Although you could probably accomplish the same task with a subquery, there's a huge performance benefit to using a self-join.
+
+#### So, we've looked at several JOIN cases / applications.
+What is the best use case for each?
+
+
+- An `INNER JOIN` or `JOIN` would work best for when you only want to return the matching results from each table.
+
+- A 'FULL OUTER JOIN' would work best if you want to return **ALL** of the results of both tables, regardless if either side has matching corresponding sides. So this query could produce a result where two joined tables will have null values when there isn't a match.
+
+- A `LEFT OUTER JOIN` or `LEFT JOIN` would return a complete data set for the left side, or in other words, the table your including in your `FROM` statement / clause. Then the table your including in your `JOIN` statement / clause , or the right side, would show all matching values, and non-matching (null) values.
+
+- A `RIGHT OUTER JOIN` or `RIGHT JOIN` is nearly identical to the  `LEFT JOIN` except it's the complete opposite. In this case, the table on the left side, or the table you're including in your `FROM` statement / clause would return all matching values and all non-matching (null) values to the table included in your `JOIN` statement / clause, or the right side. This table would just show all values.
+
+You could technically create the same affect of a `RIGHT JOIN` using a `LEFT JOIN' by switching the tables in both `FROM` and `JOIN`
+
+There are no specific use cases other than the business case and data organization / formatting requirements you'll need. Using **Outer Joins** are extremely useful when wanting to understand where each data set differs, and perhaps displaying those differences in a meaningful way by having the option of switching from the `FULL`, `LEFT `or `RIGHT` can make this process a lot easier.
+
 
 ## SQL Timestamps
 This section will go over timestamps and how to use them specifically while using PostgreSQL.
@@ -1158,54 +1206,6 @@ INNER JOIN inventory ON inventory.inventory_id = rental.inventory_id
 WHERE return_date BETWEEN '2005-05-29' AND '2005-05-30')
 ```
 
-## SELF JOIN
-
-This is a SQL query that allow you to join two rows on the same table. In order to make a self-join, you'll need to use an alias so your SQL engine will be able to tell both sides of your query apart.
-
-
-Let's see an example:
-
-Say you wanted to see who in the customer table had the same name as first name as someone else in the table who had the name as a last name.
-
-```SQL
-SELECT a.customer_id,
-a.first_name, a.last_name,
-b.customer_id,
-b.first_name, b.last_name
-FROM customer AS a, customer AS b
-WHERE a.first_name = b.last_name
-```
-One thing you'll probably notice here is that for a `SELF JOIN`, this SQL syntax doesn't use the `JOIN` keyword, and that's simply because it's a self-join.
-
-Now you could use the `JOIN` keyword if you like, but you'll just need to remember to use your aliases.
-
-Here's an example of a `SELF JOIN` using the `JOIN` keyword:
-
-```SQL
-SELECT a.customer_id, a.first_name, a.last_name,
-b.customer_id, b.first_name, b.last_name
-FROM customer AS a
-JOIN customer AS b
-ON a.first_name = b.last_name
-```
-
-Although you could probably accomplish the same task with a subquery, there's a huge performance benefit to using a self-join.
-
-## So we've looked at several JOIN cases / applications.
-What is the best use case for each?
-
-
-- An `INNER JOIN` or `JOIN` would work best for when you only want to return the matching results from each table.
-
-- A 'FULL OUTER JOIN' would work best if you want to return **ALL** of the results of both tables, regardless if either side has matching corresponding sides. So this query could produce a result where two joined tables will have null values when there isn't a match.
-
-- A `LEFT OUTER JOIN` or `LEFT JOIN` would return a complete data set for the left side, or in other words, the table your including in your `FROM` statement / clause. Then the table your including in your `JOIN` statement / clause , or the right side, would show all matching values, and non-matching (null) values.
-
-- A `RIGHT OUTER JOIN` or `RIGHT JOIN` is nearly identical to the  `LEFT JOIN` except it's the complete opposite. In this case, the table on the left side, or the table you're including in your `FROM` statement / clause would return all matching values and all non-matching (null) values to the table included in your `JOIN` statement / clause, or the right side. This table would just show all values.
-
-You could technically create the same affect of a `RIGHT JOIN` using a `LEFT JOIN' by switching the tables in both `FROM` and `JOIN`
-
-There are no specific use cases other than the business case and data organization / formatting requirements you'll need. Using **Outer Joins** are extremely useful when wanting to understand where each data set differs, and perhaps displaying those differences in a meaningful way by having the option of switching from the `FULL`, `LEFT `or `RIGHT` can make this process a lot easier.
 
 
 ### You can also contact me by email: <info@mydeveloperjourney.com>
