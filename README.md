@@ -968,6 +968,8 @@ FROM payment;
 
 
 This would be the output:
+
+
 | customer_id   | day     |
 | :-----------: | :---: |
 | 341           | 15       |
