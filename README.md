@@ -10,7 +10,7 @@
 ## Have experience in SQL / PostgreSQL and see an issue / error in these docs?
 [Let me know](https://github.com/MDJ-Studios/SQL/issues/new), and I'll be happy to review and correct it.
 
-### You can also contact me [here](<info@mydeveloperjourney.com>)
+### You can also contact me <info@mydeveloperjourney.com>
 
 ## What is SQL?
 SQL stands for structured query language.
