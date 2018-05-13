@@ -1194,6 +1194,7 @@ Although you could probably accomplish the same task with a subquery, there's a 
 ## So we've looked at several JOIN cases / applications.
 What is the best use case for each?
 
+
 - An `INNER JOIN` or `JOIN` would work best for when you only want to return the matching results from each table.
 
 - A 'FULL OUTER JOIN' would work best if you want to return **ALL** of the results of both tables, regardless if either side has matching corresponding sides. So this query could produce a result where two joined tables will have null values when there isn't a match.
@@ -1203,6 +1204,8 @@ What is the best use case for each?
 - A `RIGHT OUTER JOIN` or `RIGHT JOIN` is nearly identical to the  `LEFT JOIN` except it's the complete opposite. In this case, the table on the left side, or the table you're including in your `FROM` statement / clause would return all matching values and all non-matching (null) values to the table included in your `JOIN` statement / clause, or the right side. This table would just show all values.
 
 You could technically create the same affect of a `RIGHT JOIN` using a `LEFT JOIN' by switching the tables in both `FROM` and `JOIN`
+
+There are no specific use cases other than the business case and data organization / formatting requirements you'll need. Using **Outer Joins** are extremely useful when wanting to understand where each data set differs, and perhaps displaying those differences in a meaningful way by having the option of switching from the `FULL`, `LEFT `or `RIGHT` can make this process a lot easier.
 
 
 ### You can also contact me by email: <info@mydeveloperjourney.com>
