@@ -1064,7 +1064,8 @@ Here is the official documentation on [string functions](https://www.postgresql.
 
 PostgreSQL gives us a bunch of amazing string functions you can use to manipulate or analyze columns containing data made of strings, such as `text` for example:
 
-The concatenation operator
+#### The concatenation operator
+
 ``SQL
 ||
 ```
@@ -1081,7 +1082,37 @@ This would return a result like this:
 
 | full_name |
 | --------: |
-| jared Ely | 
+| Jared Ely |
+
+
+#### The char_length() Function
+
+Here's another useful string function that can be used to fund the length of characters in a string.
+
+```SQL
+SELECT first_name, char_length(first_name)
+FROM customer;
+```
+This query would return the following result:
+
+| first_name | char_length |
+| --------: | -----------: |
+| Jared  |  5 |
+
+#### The upper() Function
+
+```SQL
+SELECT upper(first_name) as fname_allcaps
+FROM customer;
+```
+
+This query would return the following result:
+
+
+| fname_allcaps |
+| --------: |
+  | JARED |
+
 
 ### Experienced in SQL / PostgreSQL and see an issue / error in these docs?
 [Let me know](https://github.com/MDJ-Studios/SQL/issues/new), and I'll be happy to review and correct it.
