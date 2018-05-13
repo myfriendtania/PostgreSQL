@@ -985,3 +985,9 @@ GROUP BY month
 ORDER by SUM(amount)
 LIMIT 1
 ```
+
+This query would return the following results:
+
+| sum     |   month     |
+| :----: | :--------: |
+| 28559.46  | 4       |
