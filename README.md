@@ -1162,7 +1162,7 @@ WHERE return_date BETWEEN '2005-05-29' AND '2005-05-30')
 
 This is a SQL query that allow you to join two rows on the same table. In order to make a self-join, you'll need to use an alias so your SQL engine will be able to tell both sides of your query apart.
 
-
+The next thing you'll probably notice here is that for a `SELF JOIN`, the SQL syntax never actually uses the `JOIN` keyword, and that's simply because it's a self-join.
 
 
 ### You can also contact me by email: <info@mydeveloperjourney.com>
