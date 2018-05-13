@@ -1117,4 +1117,32 @@ This query would return the following result:
 ### Experienced in SQL / PostgreSQL and see an issue / error in these docs?
 [Let me know](https://github.com/MDJ-Studios/SQL/issues/new), and I'll be happy to review and correct it.
 
+
+## The Subquery
+
+Here's another powerful query we can use for SQL that can make data analysis so much easier.
+Let's say you wanted to know which films had a rental rate that was higher than the average rental rate. One approach would be to find the average first, take note of it, and then run another query to find the films where the rental rate was higher than the previous query's result.
+
+For for example:
+
+```SQL
+SELECT AVG(rental_rate)
+FROM film;
+
+-- 3
+```
+
+Then you'd need to run another query just to find the diff where films are renting for a rate higher than the average.
+
+```SQL
+SELECT title, rental_rate
+FROM film
+WHERE rental_rate<(SELECT AVG(rental_rate) FROM film)
+```
+
+This query would produce a result of all the films with a rental rate higher than the average we found earlier.
+
+
+
+
 ### You can also contact me by email: <info@mydeveloperjourney.com>
