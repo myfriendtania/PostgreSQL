@@ -1146,6 +1146,22 @@ WHERE rental_rate<(SELECT AVG(rental_rate) FROM film)
 
 This query would produce a result of all the films with a rental rate higher than the average we found earlier.
 
+Sub Queries can get extremely complex at times as they are a very powerful way to query your database.
+
+Here's how they can become even more daunting:
+
+```SQL
+SELECT film_id, title, description
+FROM film
+WHERE film_id IN (SELECT inventory.film_id FROM rental
+INNER JOIN inventory ON inventory.inventory_id = rental.inventory_id
+WHERE return_date BETWEEN '2005-05-29' AND '2005-05-30')
+```
+
+## SELF JOIN
+
+This is a SQL query that allow you to join two rows on the same table. In order to make a self-join, you'll need to use an alias so your SQL engine will be able to tell both sides of your query apart.
+
 
 
 
