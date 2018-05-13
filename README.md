@@ -6,6 +6,7 @@
 | :------------- | :------------- |
 | Daniel Scott   | May 13, 2018 |
 
+
 ## What is SQL?
 SQL stands for structured query language.
 
