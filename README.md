@@ -45,9 +45,14 @@ Columns and rows in spreadsheets are very similar to those of a SQL database.
 - SQLite
 
 ## Key differences between MySQL vs PostgreSQL
-```text
-MySQL is a relational database management system (RDBMS) currently developed by Oracle with open-source code. This code is available for free under the GNU General Public License, and commercial versions of MySQL are also available under various proprietary agreements. PostgreSQL is an object-RDBMS (ORDBMS) that’s developed by the PostgreSQL Global Development Group. It also has an open source, which is released under the permissive PostgresSQL License. The differences between MySQL and PostgreSQL include the following key categories:
-```
+
+MySQL is a relational database management system (RDBMS) currently developed by Oracle
+with open-source code.
+This code is available for free under the GNU General Public License.
+Commercial versions of MySQL are also available under various proprietary agreements.
+PostgreSQL is an object-RDBMS (ORDBMS) that’s developed by the PostgreSQL Global Development Group.
+It also has an open source, which is released under the permissive PostgresSQL License.
+The differences between MySQL and PostgreSQL include the following key categories:
 
 - Governance
 - Supported platforms
@@ -1033,6 +1038,10 @@ FROM payment;
 | new_id     |
 | :------------- |
 | 343      |
+
+Again, there are many things you can do with mathematical functions and operators, but this is just a very high level overview of them.
+
+## String Functions
 
 ### Experienced in SQL / PostgreSQL and see an issue / error in these docs?
 [Let me know](https://github.com/MDJ-Studios/SQL/issues/new), and I'll be happy to review and correct it.
