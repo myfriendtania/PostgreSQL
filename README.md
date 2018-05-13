@@ -1,6 +1,6 @@
 
 
-# ![pgsql](./pgSQL.png) MDJ PostgreSQL Docs
+# ![pgsql](./pgSQL.png) MDJ STUDIOS - SQL / PostgreSQL Docs
 
 | Created By | Last Updated     |
 | :------------- | :------------- |
