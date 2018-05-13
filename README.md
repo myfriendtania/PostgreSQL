@@ -1007,3 +1007,34 @@ There are many things you can do with the `extract` function, but this is just a
 
 ## Mathematical Functions and Operators SQL
 Here's a [link](https://www.postgresql.org/docs/10/static/functions-math.html) to the documentation for Mathematical functions and operators.
+
+There are many different SQL Mathematical functions we can use while working with a database, but it's only necessary to interact with the most common one:
+
+The `ROUND()` SQL Mathematical function is and will be the most common one we'll use.
+
+Here's an example of using some common mathematical operators in our queries.
+
+First, we'll look at our data:
+
+```SQL
+SELECT *
+FROM payment
+LIMIT 1
+```
+
+| payment_id  | customer_id | staff_id | rental_id | amount | payment_date |
+| -----------:| ---------: | -----------:| ---------: |--------:| ---------: |
+| 17503         | 341      |   2        | 1520      |7.99       | 2007-02-15 22:25:46.996577 |
+
+```SQL
+SELECT customer_id + staff_id AS new_id
+FROM payment;
+```
+| new_id     |
+| :------------- |
+| 343      |
+
+### Experienced in SQL / PostgreSQL and see an issue / error in these docs?
+[Let me know](https://github.com/MDJ-Studios/SQL/issues/new), and I'll be happy to review and correct it.
+
+### You can also contact me by email: <info@mydeveloperjourney.com>
