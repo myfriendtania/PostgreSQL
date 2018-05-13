@@ -965,12 +965,15 @@ SELECT customer_id, extract (day from payment_date) AS day
 FROM payment;
 
 ```
+
+
 This would be the output:
-| customer_id     | day     |
-| :-------------: | :-------------: |
-| 341       | 15       |
-| 343       | 16       |
-| 261       | 16       |
+| customer_id   | day     |
+| :-----------: | :---: |
+| 341           | 15       |
+| 343           | 16       |
+| 261            | 16       |
+
 
 Why would we would need this.
 
