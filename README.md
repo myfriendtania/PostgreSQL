@@ -52,6 +52,7 @@ This code is available for free under the GNU General Public License.
 Commercial versions of MySQL are also available under various proprietary agreements.
 PostgreSQL is an object-RDBMS (ORDBMS) that’s developed by the PostgreSQL Global Development Group.
 It also has an open source, which is released under the permissive PostgresSQL License.
+
 The differences between MySQL and PostgreSQL include the following key categories:
 
 - Governance
