@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <% include ./partials/head-element %>
+  <body>
+    <h2 align='center'> You're looking at a single book</h2>
+    <% book.rows.forEach((key) => {%>
+      <p align='center'><%=key.title%> || by: <%=key.authors%></p>
+      <form align='center'action="/books/<%=key.book_id%>?_method=PUT" method="POST">
+        <input type="text" name="title" value="<%=key.title%>">
+        <input type="text" name="authors" value="<%=key.authors%>">
+        <input type="submit" value="Update Book">
+      </form>
+    <%})%>
+  </body>
+</html>

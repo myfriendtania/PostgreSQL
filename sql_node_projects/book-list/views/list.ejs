@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <% include ./partials/head-element %>
+  <body>
+    <h1 align='center'>Here's the List Page</h1>
+    <hr />
+    <a href="/">
+      <p align='center'>Go Back Home</p>
+    </a>
+    <a href="/books">
+      <p align='center'>Add A Book</p>
+    </a>
+    <%books.rows.forEach((key) => {%>
+      <a align='center' href='/book/<%=key.book_id%>'
+      <p style="margin-top: 20px;"><%=key.title%> | by: <%= key.authors%></p>
+      </a>
+      <form align='center'action="/books/<%=key.book_id%>?_method=DELETE" method="POST">
+        <input type="submit" value="Remove Book">
+      </form>
+    <%})%>
+  </body>
+</html>
