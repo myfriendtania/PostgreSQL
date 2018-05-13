@@ -66,7 +66,23 @@ The differences between MySQL and PostgreSQL include the following key categorie
 - PostgreSQL - We'll need to download this onto our machines.
 - PG Admin
 
+![pgSQL](./pgsql.png)
+
 ## Installing PostgreSQL:
+
+There are two options for installing PostgreSQL on your machine. If you're a windows user, you'll need to go with option B.
+
+
+## _Option A_ Easy Install PostgreSQL Using App (MAC USERS):
+
+Installing PostgreSQL on a MAC has never been easier than ever.
+
+- To install PgSQL, we're going to [download the app.](https://postgresapp.com/)
+
+- There are also instructions included for using the command line interpreter / interface (CLI) tools for PostgreSQL as well.
+
+
+## _Option B_ Installing PostgreSQL (Traditional Install Without APP) (MAC / WINDOWS USERS):
 - First, we'll need to go to `postgresql.org`.
 - Click on the download link to download the newest version.
   - The site should navigate you to the a page with different download versions depending on your machine.
