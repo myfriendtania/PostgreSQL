@@ -1207,5 +1207,10 @@ WHERE return_date BETWEEN '2005-05-29' AND '2005-05-30')
 ```
 
 
+# Resources:
+- [The Employee / Manager SELF JOIN scenario](https://blog.sqlauthority.com/2016/03/27/self-join-explain-example-interview-question-week-064/)
+
+
+# Contact the Author:
 
 ### You can also contact me by email: <info@mydeveloperjourney.com>
