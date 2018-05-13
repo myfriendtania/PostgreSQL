@@ -1134,6 +1134,10 @@ FROM film;
 
 Then you'd need to run another query just to find the diff where films are renting for a rate higher than the average.
 
+Here's how we can address the same task, but with a SQL subquery:
+
+Keep in mind that the subquery inside the parentheses runs first and then the outer query runs second.
+
 ```SQL
 SELECT title, rental_rate
 FROM film
