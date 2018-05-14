@@ -1239,10 +1239,29 @@ PostgreSQL supports the following datatypes:
   - float(n).
   - real or float8 is a double-precision(8-byte) floating point number.
   - numeric or numeric(p,s) is a real number with p digits with an s number after the decimal point. The numeric(p,) is the exact number.
-  
-- Temporal  date and time-related data Types
+
+- Temporal  date and time-related data Types.
+  - date
+  - time
+  - timestamp
+  - interval
+  - timestamptz
+
 - Special Types
 - Array
+
+## Primary and Foreign Keys
+
+- Primary Key
+Represents a column or a group of columns and is used to identify a row uniquely in a table.
+We use constraints to define primary keys.
+  - A table can only have one primary key.
+  - Its a good practice to add a primary key to every table.
+  - So for example, for a table for customers having a customer id, name, phone number etc. the customer id would most likely be the primary key, because it identifies that customer row uniquely in the row in the table.
+  - The primary key is typically the first column in the table.
+  - A serial Number data type is typically used for the primary key, because it will auto-increment itself as a new row is created.
+
+- Foreign Key
 
 The purpose of datatypes in databases allows for data integrity, meaning people won't be able to insert whatever data they choose into our columns. Setting a datatype for our columns tells our SQL engine what kind of data the column should accept.
 
