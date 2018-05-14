@@ -1258,10 +1258,28 @@ We use constraints to define primary keys.
   - A table can only have one primary key.
   - Its a good practice to add a primary key to every table.
   - So for example, for a table for customers having a customer id, name, phone number etc. the customer id would most likely be the primary key, because it identifies that customer row uniquely in the row in the table.
+  - We would never want to use a first_name or last_name as a table's primary key column because there will be a possibility of having duplicate values, and that can cause a lot of problems in the future.
   - The primary key is typically the first column in the table.
-  - A serial Number data type is typically used for the primary key, because it will auto-increment itself as a new row is created.
+  - A serial Number data type is typically used for the primary key, because it will auto-increment itself as a new row is created - this will also help you avoid duplicate values.
+
+
+So, where we're creating a table and a primary key for that table, this is what it woild look like:
+
+```SQL
+CREATE TABLE table_name(
+  column_name data_type PRIMARY KEY,
+  column_name data_type, ...);
+```
 
 - Foreign Key
+A Foreign key is a field or group of fields in a table that uniquely identifies a row in another table. So in other words, a foreign key is defined in a table where it refers to the primary key in another table.
+
+So, the table that contains the foreign key is called the referencing table or child table, and the table to which the foreign key references is called the referenced table, or parent table. A table can have multiple foreign keys depending on its relationship with other tables.
+
+Here's an example. Let's say we have the customer table and a payment table. The payment table has a payment_id column, which represents each instance of a payment. The payment table also has a foreign key called customer_id, which happens to be the primary key on the customer table. So there might be multiple instances of payment columns on the payments table with referencing the same customer_id from the customer table.
+
+In PostgreSQL, Foreign Keys are defined by constraints. These constraints indicate the match of values from a column in the child table to a column in the parent table.
+
 
 The purpose of datatypes in databases allows for data integrity, meaning people won't be able to insert whatever data they choose into our columns. Setting a datatype for our columns tells our SQL engine what kind of data the column should accept.
 
