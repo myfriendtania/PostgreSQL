@@ -1206,6 +1206,16 @@ INNER JOIN inventory ON inventory.inventory_id = rental.inventory_id
 WHERE return_date BETWEEN '2005-05-29' AND '2005-05-30')
 ```
 
+## PostgreSQL Data Types
+
+PostgreSQL supports the following datatypes:
+
+1. Boolean
+1. Character
+1. Number
+1. Temporal i.e. date and time-related data Types
+1. Special Types
+1. Array
 
 # Resources:
 - [The Employee / Manager SELF JOIN scenario](https://blog.sqlauthority.com/2016/03/27/self-join-explain-example-interview-question-week-064/)
