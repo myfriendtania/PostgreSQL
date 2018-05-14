@@ -1224,8 +1224,22 @@ PostgreSQL supports the following datatypes:
 
 
 - Character
-  -
+  - Single Character `char` - only one character allowed.
+  - Fixed Length `char(n)` - SQL will pad any unused space.
+  - Variable Length `varchar(n)` - SQL will not pad unused space.
+
+
 - Number
+  - Integers.
+    - smallint - 2 bytes - range(-32,768 - 32,767).
+    - int - 4 bytes - range(-214,783,648 - 214,783,647).
+    - serial same as integer but PostgreSQL will auto populate this and it is auto. incrementing.
+
+- Floating point numbers.
+  - float(n).
+  - real or float8 is a double-precision(8-byte) floating point number.
+  - numeric or numeric(p,s) is a real number with p digits with an s number after the decimal point. The numeric(p,) is the exact number.
+  
 - Temporal  date and time-related data Types
 - Special Types
 - Array
