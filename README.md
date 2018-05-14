@@ -1210,12 +1210,28 @@ WHERE return_date BETWEEN '2005-05-29' AND '2005-05-30')
 
 PostgreSQL supports the following datatypes:
 
-1. Boolean
-1. Character
-1. Number
-1. Temporal i.e. date and time-related data Types
-1. Special Types
-1. Array
+- Boolean
+  - Can hold one of two possible values, or null if unknown.
+  - You must use the key work boolean or bool when declaring a new column with this data type.
+
+| True Values | False Values |
+| :---------: | :----------: |
+| yes         |    no        |
+| true        |    false     |
+| 1           |     0        |
+| y           |     n        |
+
+
+
+- Character
+  -
+- Number
+- Temporal  date and time-related data Types
+- Special Types
+- Array
+
+The purpose of datatypes in databases allows for data integrity, meaning people won't be able to insert whatever data they choose into our columns. Setting a datatype for our columns tells our SQL engine what kind of data the column should accept.
+
 
 # Resources:
 - [The Employee / Manager SELF JOIN scenario](https://blog.sqlauthority.com/2016/03/27/self-join-explain-example-interview-question-week-064/)
