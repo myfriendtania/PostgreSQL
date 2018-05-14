@@ -4,7 +4,7 @@
 
 | Created By | Last Updated     |
 | :------------- | :------------- |
-| Daniel Scott   | May 13, 2018 |
+| Daniel Scott   | May 14, 2018 |
 
 
 ### Experienced in SQL / PostgreSQL and see an issue / error in these docs?
@@ -1280,8 +1280,48 @@ Here's an example. Let's say we have the customer table and a payment table. The
 
 In PostgreSQL, Foreign Keys are defined by constraints. These constraints indicate the match of values from a column in the child table to a column in the parent table.
 
+So, in summary, the purpose of a foreign key is to maintain referential integrity between parent and child tables.
+
+## CREATE TABLE
+
+Let's make sure we can create a DATABASE using the `psql` shell.
+
+So, first, open up a terminal and fire up a `psql` shell.
+
+```bash
+psql
+```
+
+You should see a command prompt like this:
+
+```
+Hackerman=#
+```
+
+Now you can list your databases like this:
+
+```bash
+\l
+```
+
+You should get some like of read out like this print in your console:
+
+```bash
+
+-----------------------+-----------+----------+-------------+-------------+-----
+ Hackerman             | Hackerman | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ booklist              | postgres  | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ dvdrental             | postgres  | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ postgres              | postgres  | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+
+(4 rows)
+
+```
+
 
 The purpose of datatypes in databases allows for data integrity, meaning people won't be able to insert whatever data they choose into our columns. Setting a datatype for our columns tells our SQL engine what kind of data the column should accept.
+
+
 
 
 # Resources:
