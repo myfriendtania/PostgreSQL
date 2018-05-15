@@ -1359,8 +1359,19 @@ Now that you've created a database and you can list it to see what it looks like
 
 Awesome! We're going to create some tables and then some rows inside of those tables.
 
+```SQL
+CREATE TABLE account(user_id serial PRIMARY KEY,
+  username VARCHAR(50) UNIQUE NOT NULL,
+  password VARCHAR(50) NOT NULL,
+  email VARCHAR(355) UNIQUE NOT NULL,
+  created_on TIMESTAMP NOT NULL,
+  last_login TIMESTAMP)
+```
 
-
+```SQL
+CREATE TABLE role(role_id serial PRIMARY KEY,
+  role_name VARCHAR(255) UNIQUE NOT NULL);
+```
 
 
 Now you can create a table simply with the following syntax:
