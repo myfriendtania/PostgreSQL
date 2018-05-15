@@ -1382,7 +1382,16 @@ CREATE TABLE table_name -- First your specify the table name after CREATE TABLE
 table_constraint)
 ```
 
+**NOTE** You can add the following syntax if you're unsure if you've created a table or not:
 
+- This will ensure your PostgreSQL engine skips over creating the table if it already exists.
+
+```SQL
+CREATE TABLE IF NOT EXISTS table_name(
+  column_name data_type Constraint,
+  column_2_name data_type Constraint
+);
+```
 
 
 
