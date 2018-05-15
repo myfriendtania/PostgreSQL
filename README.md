@@ -1284,6 +1284,36 @@ In PostgreSQL, Foreign Keys are defined by constraints. These constraints indica
 
 So, in summary, the purpose of a foreign key is to maintain referential integrity between parent and child tables.
 
+
+## Column Constraints:
+Column constraints, set the rules for the column.
+- Not Null - The value of the column cannot be NULL.
+  - The data that gets inserted into the column cannot be NULL (blank)
+
+- Unique - the values inserted into the column must be unique across the whole table.
+  - Take a username, or email for example.
+  - There can be an exception to this if NULL values are inserted into this table, because PostgreSQL considers each NULL value as unique - Keep in mind that is standard isn't shared across every SQL engine.
+
+- PRIMARY KEY - this constraint is the combination of NOT NULL and UNIQUE constraints.
+  - When defining one column as the PRIMARY KEY, you would use a column level constraint.
+  - However, when the primary key contains multiple columns, you'll need to use the table level constraint.
+
+- CHECK - this enables to check a condition when you insert of update data.
+
+- REFERENCES - constrains the value of the column that exists in column in another table
+
+## Table Constraints.
+So, in PostgreSQL as well as other SQL engines, we have table constraints that allow us to control how data is managed by more than one column. A list of columns, if you will.
+
+- UNIQUE(column_list) - To force the value stored in the columns listed inside the parentheses to be unique.
+
+- PRIMARY KEY(column_list) - To define the primary key that consists of multiple columns.
+
+- CHECK(condition) - To check a condition when inserting or updating data.
+
+- REFERENCES - To constrain the value stored in the column that must exist in a column in another table.
+
+
 ## CREATE TABLE
 
 Let's make sure we can create a DATABASE using the `psql` shell.
@@ -1333,24 +1363,7 @@ CREATE TABLE table_name -- First your specify the table name after CREATE TABLE
 (column_name TYPE column_contraint, -- column names separated by comma
 table_constraint)
 ```
-By the way, the column constraints, set the rules for the column.
 
-## Column constraints in more detail:
-
-- Not Null - The value of the column cannot be NULL.
-  - The data that gets inserted into the column cannot be NULL (blank)
-
-- Unique - the values inserted into the column must be unique across the whole table.
-  - Take a username, or email for example.
-  - There can be an exception to this if NULL values are inserted into this table, because PostgreSQL considers each NULL value as unique - Keep in mind that is standard isn't shared across every SQL engine.
-
-- PRIMARY KEY - this constraint is the combination of NOT NULL and UNIQUE constraints.
-  - When defining one column as the PRIMARY KEY, you would use a column level constraint.
-  - However, when the primary key contains multiple columns, you'll need to use the table level constraint.
-
-- CHECK - this enables to check a condition when you insert of update data.
-
-- REFERENCES - constrains the value of the column that exists in column in another table
 
 
 
