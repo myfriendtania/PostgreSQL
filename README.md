@@ -1342,6 +1342,14 @@ By the way, the column constraints, set the rules for the column.
   - Take a username, or email for example.
   - There can be an exception to this if NULL values are inserted into this table, because PostgreSQL considers each NULL value as unique - Keep in mind that is standard isn't shared across every SQL engine.
 
+- PRIMARY KEY - this constraint is the combination of NOT NULL and UNIQUE constraints.
+  - When defining one column as the PRIMARY KEY, you would use a column level constraint.
+  - However, when the primary key contains multiple columns, you'll need to use the table level constraint.
+
+- CHECK - this enables to check a condition when you insert of update data.
+
+- REFERENCES - constrains the value of the column that exists in column in another table
+
 
 
 The purpose of datatypes in databases allows for data integrity, meaning people won't be able to insert whatever data they choose into our columns. Setting a datatype for our columns tells our SQL engine what kind of data the column should accept.
