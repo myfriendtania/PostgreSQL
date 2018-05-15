@@ -1356,6 +1356,13 @@ Now that you've created a database and you can list it to see what it looks like
 \c DBNAME;
 ```
 
+
+Awesome! We're going to create some tables and then some rows inside of those tables.
+
+
+
+
+
 Now you can create a table simply with the following syntax:
 
 ```SQL
