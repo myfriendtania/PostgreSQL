@@ -1208,6 +1208,8 @@ WHERE return_date BETWEEN '2005-05-29' AND '2005-05-30')
 
 ## PostgreSQL Data Types
 
+The purpose of datatypes in databases allows for data integrity, meaning people won't be able to insert whatever data they choose into our columns. Setting a datatype for our columns tells our SQL engine what kind of data the column should accept.
+
 PostgreSQL supports the following datatypes:
 
 - Boolean
@@ -1352,7 +1354,6 @@ By the way, the column constraints, set the rules for the column.
 
 
 
-The purpose of datatypes in databases allows for data integrity, meaning people won't be able to insert whatever data they choose into our columns. Setting a datatype for our columns tells our SQL engine what kind of data the column should accept.
 
 
 
