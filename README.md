@@ -1301,7 +1301,7 @@ Hackerman=#
 Now you can list your databases like this:
 
 ```bash
-\l
+\l;
 ```
 
 You should get some like of read out like this print in your console:
@@ -1317,6 +1317,31 @@ You should get some like of read out like this print in your console:
 (4 rows)
 
 ```
+
+Now that you've created a database and you can list it to see what it looks like in the shell, let's `connect` to it with `\c` followed by the name of your database:
+
+```bash
+\c DBNAME;
+```
+
+Now you can create a table simply with the following syntax:
+
+```SQL
+CREATE TABLE table_name -- First your specify the table name after CREATE TABLE
+(column_name TYPE column_contraint, -- column names separated by comma
+table_constraint)
+```
+By the way, the column constraints, set the rules for the column.
+
+## Column constraints in more detail:
+
+- Not Null - The value of the column cannot be NULL.
+  - The data that gets inserted into the column cannot be NULL (blank)
+
+- Unique - the values inserted into the column must be unique across the whole table.
+  - Take a username, or email for example.
+  - There can be an exception to this if NULL values are inserted into this table, because PostgreSQL considers each NULL value as unique - Keep in mind that is standard isn't shared across every SQL engine.
+
 
 
 The purpose of datatypes in databases allows for data integrity, meaning people won't be able to insert whatever data they choose into our columns. Setting a datatype for our columns tells our SQL engine what kind of data the column should accept.
