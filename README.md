@@ -1393,6 +1393,28 @@ CREATE TABLE IF NOT EXISTS table_name(
 );
 ```
 
+Now what if we wanted to insert information into the table?
+
+## Insert Data
+
+First let's look at an example:
+
+```SQL
+INSERT INTO table_name(
+  column_1, column_2);
+VALUES(value1, value2)
+```
+
+The syntax is pretty straight forward.
+
+- First we start with the `INSERT INTO` statement.
+
+- The we specify the table name.
+
+- The we open our parentheses and add each column by name.
+
+- Then we use the keyword `VALUES`, and we add the values in the same order
+as we specified the columns in the `INSERT INTO` statement.
 
 
 
