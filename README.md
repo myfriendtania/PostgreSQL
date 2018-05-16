@@ -1422,8 +1422,8 @@ like so:
 ```SQL
 INSERT INTO table_name(column_1, column_2);
 VALUES(value1, value2),
-VALUES(value1, value2),
-VALUES(value1, value2);
+(value1, value2),
+(value1, value2);
 ```
 xx
 
