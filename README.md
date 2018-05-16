@@ -1456,6 +1456,8 @@ WHERE condition;
 
 - Now, if we don't add a `WHERE` statement to specify with row we want to update, this query will update all the rows in the columns.
 
+- We can also see the all the data we updated get returned back to us by using a `RETURNING *`
+
 ## DELETE
 
 Okay, so we've covered quite a bit, what if we needed to DELETE rows in a table?
