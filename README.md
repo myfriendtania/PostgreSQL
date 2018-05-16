@@ -1456,6 +1456,23 @@ WHERE condition;
 
 - Now, if we don't add a `WHERE` statement to specify with row we want to update, this query will update all the rows in the columns.
 
+## DELETE
+
+Okay, so we've covered quite a bit, what if we needed to DELETE rows in a table?
+
+Just like the other methods we learned, the syntax for this operation is pretty straight forward.
+
+Let's take a look at an example:
+
+```SQL
+DELETE FROM table_name
+WHERE condition;
+```
+
+**NOTE** if you omit the `WHERE` clause, all of the rows in the table will be deleted.
+
+The `DELETE` statement will return the number of rows deleted, but if no rows were deleted, the statement will return 0.
+
 
 
 
