@@ -1456,7 +1456,23 @@ WHERE condition;
 
 - Now, if we don't add a `WHERE` statement to specify with row we want to update, this query will update all the rows in the columns.
 
-- We can also see the all the data we updated get returned back to us by using a `RETURNING *`
+- We can also see the all the data we updated get returned back to us by using a `RETURNING *`.
+
+- Here's and example:
+
+```SQL
+UPDATE table_name
+SET column_1=value1,
+column_2=value2
+WHERE condition RETURNING *;
+```
+You can also just request certain columns back instead of returning everything:
+
+```SQL
+UPDATE table_name
+SET column=value
+WHERE condition RETURNING column, column_2, column_3;
+```
 
 ## DELETE
 
@@ -1475,9 +1491,19 @@ WHERE condition;
 
 The `DELETE` statement will return the number of rows deleted, but if no rows were deleted, the statement will return 0.
 
+## ALTER TABLE
 
+What if we needed to alter a table such as change the name of the table, or add / remove an entire column?
 
+PostgreSQL gives us a few very powerful queries we can do to accomplish this very task.
 
+#### Change the table name:
+
+Here's the syntax for changing the table name:
+
+```SQL
+ALTER TABLE table_name RENAME TO  new_table_name;
+```
 
 
 # Resources:
