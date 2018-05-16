@@ -1505,6 +1505,22 @@ Here's the syntax for changing the table name:
 ALTER TABLE table_name RENAME TO  new_table_name;
 ```
 
+#### Add a new column to the table:
+Here's the syntax for adding a column to an existing table using `ALTER TABLE`:
+
+```SQL
+ALTER TABLE table_name ADD COLUMN new_column_name data_type constraint;
+```
+
+#### Drop a column from a table:
+Here's the syntax for removing / dropping a column from an existing database:
+
+```SQL
+ALTER TABLE table_name DROP COLUMN column_name;
+```
+
+
+
 
 # Resources:
 - [The Employee / Manager SELF JOIN scenario](https://blog.sqlauthority.com/2016/03/27/self-join-explain-example-interview-question-week-064/)
