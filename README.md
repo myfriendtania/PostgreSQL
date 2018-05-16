@@ -1416,6 +1416,18 @@ The syntax is pretty straight forward.
 - Then we use the keyword `VALUES`, and we add the values in the same order
 as we specified the columns in the `INSERT INTO` statement.
 
+We could also insert multiple rows into a table at the same time using the same snytax
+like so:
+
+```SQL
+INSERT INTO table_name(column_1, column_2);
+VALUES(value1, value2),
+VALUES(value1, value2),
+VALUES(value1, value2);
+```
+xx
+
+
 
 
 
