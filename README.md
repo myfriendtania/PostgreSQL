@@ -1437,12 +1437,24 @@ INSERT INTO table_name(
 ## What if we needed to learn how to `UPDATE`?
 Let's learn how to update the values of the rows in the columns.
 
+Here's an example of the syntax
+
 ```SQL
 UPDATE table_name
 SET column_1=value1,
 column_2, value2,
 WHERE condition;
 ```
+
+- First, we use the `UPDATE` syntax to tell our SQL engine we'll be updating.
+
+- The we specify the table we're working with by name.
+
+- Then we use the `SET` statement in conjunction with the column name setting it to the new value.
+
+- We can also add additional columns separated by commas.
+
+- Now, if we don't add a `WHERE` statement to specify with row we want to update, this query will update all the rows in the columns.
 
 
 
