@@ -1416,7 +1416,7 @@ The syntax is pretty straight forward.
 - Then we use the keyword `VALUES`, and we add the values in the same order
 as we specified the columns in the `INSERT INTO` statement.
 
-We could also insert multiple rows into a table at the same time using the same snytax
+We could also insert multiple rows into a table at the same time using the same syntax
 like so:
 
 ```SQL
@@ -1425,7 +1425,24 @@ VALUES(value1, value2),
 (value1, value2),
 (value1, value2);
 ```
-xx
+
+You can also easily insert a copy of a row from one table into another table like this:
+
+```SQL
+INSERT INTO table_name(
+  SELECT * FROM other_table
+  WHERE condition
+);
+```
+## What if we needed to learn how to `UPDATE`?
+Let's learn how to update the values of the rows in the columns.
+
+```SQL
+UPDATE table_name
+SET column_1=value1,
+column_2, value2,
+WHERE condition;
+```
 
 
 
