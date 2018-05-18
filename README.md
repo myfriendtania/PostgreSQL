@@ -1,6 +1,6 @@
 
 
-# ![MDJ](https://avatars2.githubusercontent.com/u/36315431?s=60&v=4)MDJ STUDIOS - SQL / PostgreSQL Docs
+# ![MDJ](https://avatars2.githubusercontent.com/u/36315431?s=60&v=4) MDJ STUDIOS - SQL / PostgreSQL Docs
 
 | Created By | Last Updated     |
 | :------------- | :------------- |
