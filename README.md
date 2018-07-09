@@ -1402,8 +1402,8 @@ First let's look at an example:
 
 ```SQL
 INSERT INTO table_name(
-  column_1, column_2);
-VALUES(value1, value2)
+  column_1, column_2)
+VALUES(value1, value2);
 ```
 
 The syntax is pretty straight forward.
@@ -1421,7 +1421,7 @@ We could also insert multiple rows into a table at the same time using the same 
 like so:
 
 ```SQL
-INSERT INTO table_name(column_1, column_2);
+INSERT INTO table_name(column_1, column_2)
 VALUES(value1, value2),
 (value1, value2),
 (value1, value2);
