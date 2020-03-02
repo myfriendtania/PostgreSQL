@@ -1,6 +1,5 @@
 # DVD Rental Project created by Daniel
-
-# ![MDJ] MDJ STUDIOS - SQL / PostgreSQL Docs
+ MDJ STUDIOS - SQL / PostgreSQL Docs
 
 | Created By | Last Updated     |
 | :------------- | :------------- |
