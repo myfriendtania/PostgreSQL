@@ -1,12 +1,10 @@
+# DVD Rental Project created by Daniel
 
-
-# ![MDJ](https://avatars2.githubusercontent.com/u/36315431?s=60&v=4) MDJ STUDIOS - SQL / PostgreSQL Docs
+# ![MDJ] MDJ STUDIOS - SQL / PostgreSQL Docs
 
 | Created By | Last Updated     |
 | :------------- | :------------- |
 | Daniel Scott   | May 14, 2018 |
-
-# ![pgsql](./pgSQL.png)
 
 ### Experienced in SQL / PostgreSQL and see an issue / error in these docs?
 [Let me know](https://github.com/MDJ-Studios/SQL/issues/new), and I'll be happy to review and correct it.
